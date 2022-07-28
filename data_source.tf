@@ -1,8 +1,8 @@
 data "aws_vpc" "talent-academy" {
-    filter {
-        name   = "tag:Name"
-        values = ["lab-vpc"]
-  } 
+  filter {
+    name   = "tag:Name"
+    values = ["lab-vpc"]
+  }
 }
 
 data "aws_subnet" "data_a" {

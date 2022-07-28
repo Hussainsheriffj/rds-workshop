@@ -4,11 +4,11 @@ resource "aws_security_group" "mysql_server" {
   vpc_id      = data.aws_vpc.talent-academy.id
 
   ingress {
-    description      = "Allow port 3306"
-    from_port        = 3306
-    to_port          = 3306
-    protocol         = "tcp"
-    security_groups  = [data.aws_security_group.ec2_server.id]
+    description     = "Allow port 3306"
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
+    security_groups = [data.aws_security_group.ec2_server.id]
   }
 
   egress {
